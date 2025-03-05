@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Mi Página sobre la serie de fibonacci</title> 
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>    
+   
+        <h1> Mi  WEB acerca de los numeros de fibonacci</h1>
+        <script>
+            var numero;
+            numero =  prompt("Introduce un número entre 1 y 100 para calcular la serie de Fibonacci");  
+            numero = Number(numero);  
+            while (numero < 1 || numero > 100) {
+                numero = prompt("Número inválido. Introduce un número entre 1 y 100:");
+                numero = Number (numero); 
+            }
+
+            var a = 1;
+            var b = 2;
+            var temp;
+            var i= 2;
+
+            document.write (a);
+            document.write ("<br>"+b); 
+
+           
+            for (i = 2; i < numero; i++) {
+              temp = a + b;
+              document.write("<br>"+temp); 
+              a = b;
+              b = temp; 
+              }
+         </script>
+</body>
+</html>
