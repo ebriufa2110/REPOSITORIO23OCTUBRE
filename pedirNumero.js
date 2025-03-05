@@ -1,9 +1,17 @@
-function pedirNumeroEnRango(min, max) {
-  var numero;
-  do {
-    numero = prompt("Ingrese un número entre " + min +" y " + max + ":");
-    numero = Number(numero); 
-  } while (numero < min || numero > max);
+function comprobarEsPrimo (numero)
+{
+  var esPrimo;
+  var i;
 
-  return numero;
+  for (i=numero-1; i>=2; i=i-1 )
+    {
+      if ( numero % i == 0 )
+        {
+        esPrimo = false;
+        return esPrimo;
+        }
+    }
+// si no hemos encontrado ningún divisor entonces el numero es primo
+esPrimo = true;  
+return esPrimo;
 }
