@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos de Objetos en JavaScript</title>
+    <style>
+        .ejemplo {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .resultado {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de Objetos en JavaScript</h1>
+
+    <!-- Ejemplo 1: Persona -->
+    <div class="ejemplo">
+        <h2>1. Objeto Persona</h2>
+        <button onclick="persona.saludar()">Saludar</button>
+        <div id="resultado-persona" class="resultado"></div>
+    </div>
+
+    <script>
+       
+        const persona = {
+            nombre: "Ana",
+            edad: 25,
+            ciudad: "Madrid",
+            saludar() {
+                const output = document.getElementById('resultado-persona');
+                output.innerHTML = `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+            }
+        };
+    </script>
+</body>
+</html>
